@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-
+//al usar vite, se cambia el llamado de la variable de entorno. si es solo react process.env.REACT_APP_SALUDO
 function App() {
   const [count, setCount] = useState(0)
 
@@ -23,7 +23,8 @@ function App() {
           count is {count}
         </button>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          
+          {import.meta.env.VITE_APP_SALUDO}
         </p>
       </div>
       <p className="read-the-docs">
